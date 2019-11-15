@@ -1,0 +1,178 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="component_event" id="4kzCT2ZF%[MlPTzJVW6$" x="92" y="67">
+    <mutation component_type="Button" is_generic="false" instance_name="Botão1" event_name="Click"></mutation>
+    <field name="COMPONENT_SELECTOR">Botão1</field>
+    <statement name="DO">
+      <block type="component_method" id="gDW%5e5m2?X,_`hrJpyc">
+        <mutation component_type="TextBox" method_name="HideKeyboard" is_generic="false" instance_name="TextBox1"></mutation>
+        <field name="COMPONENT_SELECTOR">TextBox1</field>
+        <next>
+          <block type="component_method" id="{oFgmH@rm/f!di`Py-T?">
+            <mutation component_type="TextBox" method_name="HideKeyboard" is_generic="false" instance_name="CaixaDeTexto1"></mutation>
+            <field name="COMPONENT_SELECTOR">CaixaDeTexto1</field>
+            <next>
+              <block type="controls_closeScreenWithValue" id="}0iUbH~Zq1qCI7u1M3Ct">
+                <value name="SCREEN">
+                  <block type="text_join" id="8QAP-0za/b#B-=CygD%c">
+                    <mutation items="3"></mutation>
+                    <value name="ADD0">
+                      <block type="component_set_get" id="s]{1%7eq?x[y3:M^)R*y">
+                        <mutation component_type="TextBox" set_or_get="get" property_name="Text" is_generic="false" instance_name="TextBox1"></mutation>
+                        <field name="COMPONENT_SELECTOR">TextBox1</field>
+                        <field name="PROP">Text</field>
+                      </block>
+                    </value>
+                    <value name="ADD1">
+                      <block type="text" id=".D*I@%,O=n.qwD4,]vJ1">
+                        <field name="TEXT">:\n</field>
+                      </block>
+                    </value>
+                    <value name="ADD2">
+                      <block type="component_set_get" id=":@aPy8bFnT)WX.f6e@^l">
+                        <mutation component_type="TextBox" set_or_get="get" property_name="Text" is_generic="false" instance_name="CaixaDeTexto1"></mutation>
+                        <field name="COMPONENT_SELECTOR">CaixaDeTexto1</field>
+                        <field name="PROP">Text</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="7?~M2ODo!(S61P1}?x=." x="75" y="254">
+    <mutation component_type="Form" is_generic="false" instance_name="denuncia2" event_name="Initialize"></mutation>
+    <field name="COMPONENT_SELECTOR">denuncia2</field>
+    <statement name="DO">
+      <block type="controls_if" id="@fme%aCe*4c/HNqv_sIZ">
+        <mutation elseif="1"></mutation>
+        <value name="IF0">
+          <block type="logic_compare" id="3a4L*LNlZ7}9xsC)[Yqw">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <block type="controls_getStartValue" id="+b#j]K(`W26$fN@2gS^7"></block>
+            </value>
+            <value name="B">
+              <block type="math_number" id="n(E-{c.95U:v,FV_]^CN">
+                <field name="NUM">1</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO0">
+          <block type="component_set_get" id="8(wqux.@(c#6~:gou825">
+            <mutation component_type="Label" set_or_get="set" property_name="Text" is_generic="false" instance_name="Label1"></mutation>
+            <field name="COMPONENT_SELECTOR">Label1</field>
+            <field name="PROP">Text</field>
+            <value name="VALUE">
+              <block type="text" id="`?9txHri.{WRqX^UOHOd">
+                <field name="TEXT">What pest did you find?</field>
+              </block>
+            </value>
+            <next>
+              <block type="component_set_get" id="@1kH4f#5bwUF+U/XIt7c">
+                <mutation component_type="Label" set_or_get="set" property_name="Text" is_generic="false" instance_name="Label2"></mutation>
+                <field name="COMPONENT_SELECTOR">Label2</field>
+                <field name="PROP">Text</field>
+                <value name="VALUE">
+                  <block type="text" id="1.O0l%:Hv{T~QI0T$?ar">
+                    <field name="TEXT">Describe the situation where this pest was found:</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="component_set_get" id="mCjchoveWL/w$d.fB2$N">
+                    <mutation component_type="Button" set_or_get="set" property_name="Text" is_generic="false" instance_name="Botão1"></mutation>
+                    <field name="COMPONENT_SELECTOR">Botão1</field>
+                    <field name="PROP">Text</field>
+                    <value name="VALUE">
+                      <block type="text" id="z0U%8%f3I9S?nGbpaPq%">
+                        <field name="TEXT">Report</field>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="component_set_get" id="(M$tFOYX@.!*)Duzrc}B">
+                        <mutation component_type="TextBox" set_or_get="set" property_name="Hint" is_generic="false" instance_name="TextBox1"></mutation>
+                        <field name="COMPONENT_SELECTOR">TextBox1</field>
+                        <field name="PROP">Hint</field>
+                        <value name="VALUE">
+                          <block type="text" id="ji.E#KsS)RK0fp4N5{/L">
+                            <field name="TEXT">Ex. Cockroach</field>
+                          </block>
+                        </value>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </statement>
+        <value name="IF1">
+          <block type="logic_compare" id="/8NyIf43lU)IV}6sq_r~">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <block type="controls_getStartValue" id="^x]h5VXDa56imK^SW4o="></block>
+            </value>
+            <value name="B">
+              <block type="math_number" id="db7R-Oz|srtAeNih@7^P">
+                <field name="NUM">0</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO1">
+          <block type="component_set_get" id="=~*S]yd3CU}uj{ICUW;s">
+            <mutation component_type="Label" set_or_get="set" property_name="Text" is_generic="false" instance_name="Label1"></mutation>
+            <field name="COMPONENT_SELECTOR">Label1</field>
+            <field name="PROP">Text</field>
+            <value name="VALUE">
+              <block type="text" id="U^xnz%ZO6CIGjd%o9j7.">
+                <field name="TEXT">Qual praga  você encontrou?</field>
+              </block>
+            </value>
+            <next>
+              <block type="component_set_get" id="veYXZ|T,OBr^np593BVB">
+                <mutation component_type="Label" set_or_get="set" property_name="Text" is_generic="false" instance_name="Label2"></mutation>
+                <field name="COMPONENT_SELECTOR">Label2</field>
+                <field name="PROP">Text</field>
+                <value name="VALUE">
+                  <block type="text" id="}!RH~}k*[(;jkVFB=q=s">
+                    <field name="TEXT">Descreva a situação de onde essa praga foi encontrada:</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="component_set_get" id="Fx|$p(ayyr,Klwxs/WHB">
+                    <mutation component_type="Button" set_or_get="set" property_name="Text" is_generic="false" instance_name="Botão1"></mutation>
+                    <field name="COMPONENT_SELECTOR">Botão1</field>
+                    <field name="PROP">Text</field>
+                    <value name="VALUE">
+                      <block type="text" id="r*xg4$%{HY.jI1ZJ^;t;">
+                        <field name="TEXT">Denunciar</field>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="component_set_get" id="dgm{Ns?KvbXio;uUtziV">
+                        <mutation component_type="TextBox" set_or_get="set" property_name="Hint" is_generic="false" instance_name="TextBox1"></mutation>
+                        <field name="COMPONENT_SELECTOR">TextBox1</field>
+                        <field name="PROP">Hint</field>
+                        <value name="VALUE">
+                          <block type="text" id="6l/RScSg=*jI)h()7}QA">
+                            <field name="TEXT">Ex. Barata</field>
+                          </block>
+                        </value>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </statement>
+      </block>
+    </statement>
+  </block>
+  <yacodeblocks ya-version="186" language-version="27"></yacodeblocks>
+</xml>

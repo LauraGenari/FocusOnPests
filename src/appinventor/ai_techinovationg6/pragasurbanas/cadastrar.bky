@@ -1,0 +1,222 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="component_event" id="I4?58C`EJ}hXE6,Ww%S7" x="251" y="116">
+    <mutation component_type="Button" is_generic="false" instance_name="continuarcadastro" event_name="Click"></mutation>
+    <field name="COMPONENT_SELECTOR">continuarcadastro</field>
+    <statement name="DO">
+      <block type="component_method" id="JFs+u~3*2^`V0j5+E$o0">
+        <mutation component_type="FirebaseAuth" method_name="CreateUserWithEmailAndPassword" is_generic="false" instance_name="FirebaseAuth1"></mutation>
+        <field name="COMPONENT_SELECTOR">FirebaseAuth1</field>
+        <value name="ARG0">
+          <block type="component_set_get" id="%{AfO6KX;G/!z4q$K!pO">
+            <mutation component_type="EmailPicker" set_or_get="get" property_name="Text" is_generic="false" instance_name="emailcadastro"></mutation>
+            <field name="COMPONENT_SELECTOR">emailcadastro</field>
+            <field name="PROP">Text</field>
+          </block>
+        </value>
+        <value name="ARG1">
+          <block type="component_set_get" id=",Q_sw7LVWJEz1!4|#ME*">
+            <mutation component_type="PasswordTextBox" set_or_get="get" property_name="Text" is_generic="false" instance_name="senhacadastro"></mutation>
+            <field name="COMPONENT_SELECTOR">senhacadastro</field>
+            <field name="PROP">Text</field>
+          </block>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="P(9AuLt:PY,4|.?:iX=|" x="164" y="240">
+    <mutation component_type="FirebaseAuth" is_generic="false" instance_name="FirebaseAuth1" event_name="FirebaseAuthUserData"></mutation>
+    <field name="COMPONENT_SELECTOR">FirebaseAuth1</field>
+    <statement name="DO">
+      <block type="controls_openAnotherScreenWithStartValue" id="_+9X56@V2@CvUPQ]t4]a">
+        <value name="SCREENNAME">
+          <block type="text" id="*5aLgMOr-c5[zwHl+XED">
+            <field name="TEXT">contasucesso</field>
+          </block>
+        </value>
+        <value name="STARTVALUE">
+          <block type="controls_getStartValue" id="3v(^~q`c^3gM|%d!K_[6"></block>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="{!a8pF@5$KvLv*LKr~Dg" x="711" y="248">
+    <mutation component_type="FirebaseAuth" is_generic="false" instance_name="FirebaseAuth1" event_name="FirebaseAuthError"></mutation>
+    <field name="COMPONENT_SELECTOR">FirebaseAuth1</field>
+    <statement name="DO">
+      <block type="controls_if" id="Ie}!=Wn=Jq^0PF2156G}">
+        <mutation elseif="2"></mutation>
+        <value name="IF0">
+          <block type="logic_compare" id="|{dTL+il{tV.Ulzw{f{S">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <block type="lexical_variable_get" id="4sl07O6%bRXA|;0QcG0S">
+                <mutation>
+                  <eventparam name="message"></eventparam>
+                </mutation>
+                <field name="VAR">message</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="text" id=")dnf#1tSzn}R!GE!ED|h">
+                <field name="TEXT">INVALID_EMAIL</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO0">
+          <block type="component_method" id="9g]!mnkP[NBnyF~WQKs%">
+            <mutation component_type="Notifier" method_name="ShowAlert" is_generic="false" instance_name="Notificador1"></mutation>
+            <field name="COMPONENT_SELECTOR">Notificador1</field>
+            <value name="ARG0">
+              <block type="text" id="GA~WK!xhRtD@In$c9npq">
+                <field name="TEXT">Esse email não existe</field>
+              </block>
+            </value>
+          </block>
+        </statement>
+        <value name="IF1">
+          <block type="logic_compare" id="7Xc9;]j`P%XonHP)D-?%">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <block type="lexical_variable_get" id=".6{3JILBvntJc$Y~/DHK">
+                <mutation>
+                  <eventparam name="message"></eventparam>
+                </mutation>
+                <field name="VAR">message</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="text" id="E!DUp4bunb2fdk*tSZeL">
+                <field name="TEXT">EMAIL_EXISTS</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO1">
+          <block type="component_method" id="@j%}`O#ai?%4FdKR(G;f">
+            <mutation component_type="Notifier" method_name="ShowAlert" is_generic="false" instance_name="Notificador1"></mutation>
+            <field name="COMPONENT_SELECTOR">Notificador1</field>
+            <value name="ARG0">
+              <block type="text" id=";kTgq=[q2eLY^GjH.x}H">
+                <field name="TEXT">Esse email já existe</field>
+              </block>
+            </value>
+          </block>
+        </statement>
+        <value name="IF2">
+          <block type="logic_compare" id="gOnF{IAu{wv*DMp=FL=W">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <block type="lexical_variable_get" id="EVT0!iqi/9)Zu4/o|v8:">
+                <mutation>
+                  <eventparam name="message"></eventparam>
+                </mutation>
+                <field name="VAR">message</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="text" id="/sjJaMu.dYAdtza)ulVs">
+                <field name="TEXT">WEAK_PASSWORD : Password should be at least 6 characters</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO2">
+          <block type="component_method" id="9r6/}3(lN}#Y,2R#9USS">
+            <mutation component_type="Notifier" method_name="ShowAlert" is_generic="false" instance_name="Notificador1"></mutation>
+            <field name="COMPONENT_SELECTOR">Notificador1</field>
+            <value name="ARG0">
+              <block type="text" id="{YKECQ:v2QKH=9ACwbxu">
+                <field name="TEXT">A senha deve ter mais de 6 digítos</field>
+              </block>
+            </value>
+          </block>
+        </statement>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id=".)rW8WD3|{J.$oH,=KUt" x="143" y="377">
+    <mutation component_type="Form" is_generic="false" instance_name="cadastrar" event_name="Initialize"></mutation>
+    <field name="COMPONENT_SELECTOR">cadastrar</field>
+    <statement name="DO">
+      <block type="controls_if" id="EPR[*{6c{0jdNJyK2Ry%">
+        <mutation elseif="1"></mutation>
+        <value name="IF0">
+          <block type="logic_compare" id="qj|wEDo9Yd:8RirS),yz">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <block type="controls_getStartValue" id="G9,H1x87cATvHQKa,w?e"></block>
+            </value>
+            <value name="B">
+              <block type="math_number" id="Bw#FQbo5!$|u$o^EbL$[">
+                <field name="NUM">1</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO0">
+          <block type="component_set_get" id="*Rm(W8A.1Z]Bc.(zTh:V">
+            <mutation component_type="Label" set_or_get="set" property_name="Text" is_generic="false" instance_name="Legenda1"></mutation>
+            <field name="COMPONENT_SELECTOR">Legenda1</field>
+            <field name="PROP">Text</field>
+            <value name="VALUE">
+              <block type="text" id="b2~(IHF_2[p+7=*6cFP^">
+                <field name="TEXT">Register</field>
+              </block>
+            </value>
+            <next>
+              <block type="component_set_get" id="_Kg_*wg#u$8(83Lb6bg^">
+                <mutation component_type="Button" set_or_get="set" property_name="Text" is_generic="false" instance_name="continuarcadastro"></mutation>
+                <field name="COMPONENT_SELECTOR">continuarcadastro</field>
+                <field name="PROP">Text</field>
+                <value name="VALUE">
+                  <block type="text" id="*z_r4E1W`),OPO}MR2uw">
+                    <field name="TEXT">Sign in</field>
+                  </block>
+                </value>
+              </block>
+            </next>
+          </block>
+        </statement>
+        <value name="IF1">
+          <block type="logic_compare" id="|}1^)sRE1(B63;0(`GJw">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <block type="controls_getStartValue" id="x9[+mi!r)E]Y%uccRx_k"></block>
+            </value>
+            <value name="B">
+              <block type="math_number" id="u_$$8.HQGMMM$WFL;A=z">
+                <field name="NUM">0</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO1">
+          <block type="component_set_get" id="w8@xQTlm(-0Vu]nNnOut">
+            <mutation component_type="Label" set_or_get="set" property_name="Text" is_generic="false" instance_name="Legenda1"></mutation>
+            <field name="COMPONENT_SELECTOR">Legenda1</field>
+            <field name="PROP">Text</field>
+            <value name="VALUE">
+              <block type="text" id="#V;d8Jmmyh8~kx#Un`;Q">
+                <field name="TEXT">Cadastre-se</field>
+              </block>
+            </value>
+            <next>
+              <block type="component_set_get" id="x;em|ksYNl-HO{Kee{sP">
+                <mutation component_type="Button" set_or_get="set" property_name="Text" is_generic="false" instance_name="continuarcadastro"></mutation>
+                <field name="COMPONENT_SELECTOR">continuarcadastro</field>
+                <field name="PROP">Text</field>
+                <value name="VALUE">
+                  <block type="text" id="6*!O]Eqf^n|.;Q#@6%/6">
+                    <field name="TEXT">Enviar</field>
+                  </block>
+                </value>
+              </block>
+            </next>
+          </block>
+        </statement>
+      </block>
+    </statement>
+  </block>
+  <yacodeblocks ya-version="186" language-version="27"></yacodeblocks>
+</xml>

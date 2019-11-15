@@ -1,0 +1,19 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="component_event" id="+[x*(-?pvz|Z5pQC1STn" x="345" y="363">
+    <mutation component_type="Button" is_generic="false" instance_name="Botão1" event_name="Click"></mutation>
+    <field name="COMPONENT_SELECTOR">Botão1</field>
+    <statement name="DO">
+      <block type="controls_openAnotherScreenWithStartValue" id="g{.{9]iE:UO}FvOoI(aM">
+        <value name="SCREENNAME">
+          <block type="text" id="+|,L]/8a.si9V~Dklzoo">
+            <field name="TEXT">menu</field>
+          </block>
+        </value>
+        <value name="STARTVALUE">
+          <block type="controls_getStartValue" id="osl!4L~pll{|-Go/u.Zl"></block>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <yacodeblocks ya-version="186" language-version="27"></yacodeblocks>
+</xml>

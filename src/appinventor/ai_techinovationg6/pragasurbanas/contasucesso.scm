@@ -1,0 +1,4 @@
+#|
+$JSON
+{"authURL":["ai2.appinventor.mit.edu"],"YaVersion":"186","Source":"Form","Properties":{"$Name":"contasucesso","$Type":"Form","$Version":"24","AccentColor":"&HFF6C917C","AlignHorizontal":"3","AlignVertical":"2","AppName":"pragasurbanas","BackgroundColor":"&HFFD3FFE9","BackgroundImage":"degrade8-576x1024.jpg","PrimaryColor":"&HFFFFFF00","PrimaryColorDark":"&HFFFFAFAF","Title":"contasucesso","Uuid":"0","$Components":[{"$Name":"Legenda3","$Type":"Label","$Version":"4","FontBold":"True","Height":"-1015","Text":"PARAB\u00c9NS!!! Sua conta foi criada com sucesso.","TextAlignment":"1","Uuid":"-915027287"},{"$Name":"conituarsucesso","$Type":"Button","$Version":"6","BackgroundColor":"&HFFCCCCCC","FontBold":"True","Shape":"1","Text":"Continuar","TextAlignment":"0","Uuid":"-859954983"}]}}
+|#

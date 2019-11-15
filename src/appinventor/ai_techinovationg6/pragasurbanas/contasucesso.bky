@@ -1,0 +1,102 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="component_event" id=";I6*.Z%6@:}ZguI*l@OP" x="424" y="8">
+    <mutation component_type="Button" is_generic="false" instance_name="conituarsucesso" event_name="Click"></mutation>
+    <field name="COMPONENT_SELECTOR">conituarsucesso</field>
+    <statement name="DO">
+      <block type="controls_openAnotherScreenWithStartValue" id="F@(i)4=PWd|hI$81d]ga">
+        <value name="SCREENNAME">
+          <block type="text" id=",o*e^w,J55vz!{LI4iCd">
+            <field name="TEXT">menu</field>
+          </block>
+        </value>
+        <value name="STARTVALUE">
+          <block type="controls_getStartValue" id="0231mh~F?G@xK!IIC}j|"></block>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="7?~M2ODo!(S61P1}?x=." x="388" y="113">
+    <mutation component_type="Form" is_generic="false" instance_name="contasucesso" event_name="Initialize"></mutation>
+    <field name="COMPONENT_SELECTOR">contasucesso</field>
+    <statement name="DO">
+      <block type="controls_if" id="@fme%aCe*4c/HNqv_sIZ">
+        <mutation elseif="1"></mutation>
+        <value name="IF0">
+          <block type="logic_compare" id="3a4L*LNlZ7}9xsC)[Yqw">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <block type="controls_getStartValue" id="+b#j]K(`W26$fN@2gS^7"></block>
+            </value>
+            <value name="B">
+              <block type="math_number" id="n(E-{c.95U:v,FV_]^CN">
+                <field name="NUM">1</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO0">
+          <block type="component_set_get" id="L,J]^AdL;ERQZaS|6IJ^">
+            <mutation component_type="Label" set_or_get="set" property_name="Text" is_generic="false" instance_name="Legenda3"></mutation>
+            <field name="COMPONENT_SELECTOR">Legenda3</field>
+            <field name="PROP">Text</field>
+            <value name="VALUE">
+              <block type="text" id="1$d6J3e02pH2GnbcPV-n">
+                <field name="TEXT">CONGRATULATIONS!!! Your account was successfully created.</field>
+              </block>
+            </value>
+            <next>
+              <block type="component_set_get" id=";1by=n1;3dO#lMT/]PBX">
+                <mutation component_type="Button" set_or_get="set" property_name="Text" is_generic="false" instance_name="conituarsucesso"></mutation>
+                <field name="COMPONENT_SELECTOR">conituarsucesso</field>
+                <field name="PROP">Text</field>
+                <value name="VALUE">
+                  <block type="text" id="U@-wFdMv2J9cT2U1_=}Q">
+                    <field name="TEXT">Continue</field>
+                  </block>
+                </value>
+              </block>
+            </next>
+          </block>
+        </statement>
+        <value name="IF1">
+          <block type="logic_compare" id="/8NyIf43lU)IV}6sq_r~">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <block type="controls_getStartValue" id="^x]h5VXDa56imK^SW4o="></block>
+            </value>
+            <value name="B">
+              <block type="math_number" id="db7R-Oz|srtAeNih@7^P">
+                <field name="NUM">0</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO1">
+          <block type="component_set_get" id="=rJ_L!}PrvhIh`.*h./_">
+            <mutation component_type="Label" set_or_get="set" property_name="Text" is_generic="false" instance_name="Legenda3"></mutation>
+            <field name="COMPONENT_SELECTOR">Legenda3</field>
+            <field name="PROP">Text</field>
+            <value name="VALUE">
+              <block type="text" id="IHGD:Sir)0Ph|t#aR?4-">
+                <field name="TEXT">PARABÉNS!!! Sua conta foi criada com sucesso.</field>
+              </block>
+            </value>
+            <next>
+              <block type="component_set_get" id="E$vw9_Vf(8Xp;{E?C;m1">
+                <mutation component_type="Button" set_or_get="set" property_name="Text" is_generic="false" instance_name="conituarsucesso"></mutation>
+                <field name="COMPONENT_SELECTOR">conituarsucesso</field>
+                <field name="PROP">Text</field>
+                <value name="VALUE">
+                  <block type="text" id="J,{t?XMRtXof7F%^C/yH">
+                    <field name="TEXT">Continuar</field>
+                  </block>
+                </value>
+              </block>
+            </next>
+          </block>
+        </statement>
+      </block>
+    </statement>
+  </block>
+  <yacodeblocks ya-version="186" language-version="27"></yacodeblocks>
+</xml>

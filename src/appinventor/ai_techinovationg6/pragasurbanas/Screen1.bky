@@ -1,0 +1,293 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="component_event" id="W_=zC.PK@RGLymUd`PSY" x="271" y="78">
+    <mutation component_type="Button" is_generic="false" instance_name="Botão1" event_name="Click"></mutation>
+    <field name="COMPONENT_SELECTOR">Botão1</field>
+    <statement name="DO">
+      <block type="component_method" id="gXKB*gds`8T1mfK#Lhrf">
+        <mutation component_type="FirebaseAuth" method_name="SignInWithEmailAndPassword" is_generic="false" instance_name="FirebaseAuth1"></mutation>
+        <field name="COMPONENT_SELECTOR">FirebaseAuth1</field>
+        <value name="ARG0">
+          <block type="component_set_get" id="^;aM233zFc1xf9QRzAf[">
+            <mutation component_type="TextBox" set_or_get="get" property_name="Text" is_generic="false" instance_name="CaixaDeTexto1"></mutation>
+            <field name="COMPONENT_SELECTOR">CaixaDeTexto1</field>
+            <field name="PROP">Text</field>
+          </block>
+        </value>
+        <value name="ARG1">
+          <block type="component_set_get" id="{SF1~v_$aHd~=~t7yZof">
+            <mutation component_type="PasswordTextBox" set_or_get="get" property_name="Text" is_generic="false" instance_name="CaixaDeSenha1"></mutation>
+            <field name="COMPONENT_SELECTOR">CaixaDeSenha1</field>
+            <field name="PROP">Text</field>
+          </block>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <block type="global_declaration" id="QR`[N]{Y!t==Mxu,2TnI" x="854" y="70">
+    <field name="NAME">flag</field>
+    <value name="VALUE">
+      <block type="math_number" id="8`)A),Sjdi46xzh/PQTY">
+        <field name="NUM">0</field>
+      </block>
+    </value>
+  </block>
+  <block type="component_event" id=":DJ=hqU(jhuMSz$Sqac$" x="276" y="209">
+    <mutation component_type="Button" is_generic="false" instance_name="Botão2" event_name="Click"></mutation>
+    <field name="COMPONENT_SELECTOR">Botão2</field>
+    <statement name="DO">
+      <block type="controls_openAnotherScreenWithStartValue" id="~@EspieU-9/5]BMm0|38">
+        <value name="SCREENNAME">
+          <block type="text" id="InPa/(h)*EW.[:dp@j_H">
+            <field name="TEXT">cadastrar</field>
+          </block>
+        </value>
+        <value name="STARTVALUE">
+          <block type="lexical_variable_get" id="AHY|NufWR-i;-O%Yd$c$">
+            <field name="VAR">global flag</field>
+          </block>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="1=nio~rj.[l0MpV62/M=" x="273" y="306">
+    <mutation component_type="FirebaseAuth" is_generic="false" instance_name="FirebaseAuth1" event_name="FirebaseAuthUserData"></mutation>
+    <field name="COMPONENT_SELECTOR">FirebaseAuth1</field>
+    <statement name="DO">
+      <block type="controls_openAnotherScreenWithStartValue" id="^8r9TVhOwOJu{!5_srSC">
+        <value name="SCREENNAME">
+          <block type="text" id="?y|;fa(!Tc~%*EQEexi0">
+            <field name="TEXT">menu</field>
+          </block>
+        </value>
+        <value name="STARTVALUE">
+          <block type="lexical_variable_get" id="E=96xh=;1i?`IC90dSzd">
+            <field name="VAR">global flag</field>
+          </block>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="Mkud;nON1?oB~`),o$V^" x="988" y="303">
+    <mutation component_type="Button" is_generic="false" instance_name="Botão3" event_name="Click"></mutation>
+    <field name="COMPONENT_SELECTOR">Botão3</field>
+    <statement name="DO">
+      <block type="controls_if" id=":W$@b68sJ9y_ygQPC{K:">
+        <mutation elseif="1"></mutation>
+        <value name="IF0">
+          <block type="logic_compare" id="sz@{nR)z#LkIRwS#^?[0">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <block type="lexical_variable_get" id="yt{v?-+-yCf??eHcxmpU">
+                <field name="VAR">global flag</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="math_number" id="b$-[jc`::wqjOK5kSQd:">
+                <field name="NUM">0</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO0">
+          <block type="component_set_get" id="q9`E`:A=1?zzF.zNmJ|Q">
+            <mutation component_type="Label" set_or_get="set" property_name="Text" is_generic="false" instance_name="Legenda1"></mutation>
+            <field name="COMPONENT_SELECTOR">Legenda1</field>
+            <field name="PROP">Text</field>
+            <value name="VALUE">
+              <block type="text" id="}O8t$susNkXkm%.s]*)G">
+                <field name="TEXT">Login</field>
+              </block>
+            </value>
+            <next>
+              <block type="component_set_get" id="}%ccp3G[{INb`8!CY#.$">
+                <mutation component_type="Button" set_or_get="set" property_name="Text" is_generic="false" instance_name="Botão1"></mutation>
+                <field name="COMPONENT_SELECTOR">Botão1</field>
+                <field name="PROP">Text</field>
+                <value name="VALUE">
+                  <block type="text" id="K?fD/$;}Q5)J;@2-K;Eb">
+                    <field name="TEXT">Login</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="component_set_get" id="AJ3E!ofUJAT*Y=GA_$xo">
+                    <mutation component_type="Button" set_or_get="set" property_name="Text" is_generic="false" instance_name="Botão2"></mutation>
+                    <field name="COMPONENT_SELECTOR">Botão2</field>
+                    <field name="PROP">Text</field>
+                    <value name="VALUE">
+                      <block type="text" id="}l,tcq/{OJKNf/sS5Mw;">
+                        <field name="TEXT">Register</field>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="component_set_get" id="([~Zn+VKAtLA775FmJV%">
+                        <mutation component_type="Button" set_or_get="set" property_name="Text" is_generic="false" instance_name="Botão3"></mutation>
+                        <field name="COMPONENT_SELECTOR">Botão3</field>
+                        <field name="PROP">Text</field>
+                        <value name="VALUE">
+                          <block type="text" id="FT8BZVG2jI{b/O-I[Mc{">
+                            <field name="TEXT">Mudar para Português</field>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="lexical_variable_set" id="nN~Ht|4Lbri:1=ndF)n:">
+                            <field name="VAR">global flag</field>
+                            <value name="VALUE">
+                              <block type="math_number" id="V[Gt6*Km$IU5w9X}kQ]?">
+                                <field name="NUM">1</field>
+                              </block>
+                            </value>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </statement>
+        <value name="IF1">
+          <block type="logic_compare" id="QF/`GQ^wL2B4`wA6/yN{">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <block type="lexical_variable_get" id="+{|xl]#4vono~=Ds{a!~">
+                <field name="VAR">global flag</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="math_number" id="t9C@tj__|CxO,VRnXHX1">
+                <field name="NUM">1</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO1">
+          <block type="component_set_get" id=";{1*VPYCRy8TV)%D2(H:">
+            <mutation component_type="Label" set_or_get="set" property_name="Text" is_generic="false" instance_name="Legenda1"></mutation>
+            <field name="COMPONENT_SELECTOR">Legenda1</field>
+            <field name="PROP">Text</field>
+            <value name="VALUE">
+              <block type="text" id=")2#WTn:Ui_3}n]-c_{UP">
+                <field name="TEXT">Entrar</field>
+              </block>
+            </value>
+            <next>
+              <block type="component_set_get" id=":Vze4.wdG,KCoX8#k=MI">
+                <mutation component_type="Button" set_or_get="set" property_name="Text" is_generic="false" instance_name="Botão1"></mutation>
+                <field name="COMPONENT_SELECTOR">Botão1</field>
+                <field name="PROP">Text</field>
+                <value name="VALUE">
+                  <block type="text" id="}CY~9~5j)}oKZ}~M-DZ-">
+                    <field name="TEXT">Entrar</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="component_set_get" id="pfX,yQA+sD8A4;RGpEDk">
+                    <mutation component_type="Button" set_or_get="set" property_name="Text" is_generic="false" instance_name="Botão2"></mutation>
+                    <field name="COMPONENT_SELECTOR">Botão2</field>
+                    <field name="PROP">Text</field>
+                    <value name="VALUE">
+                      <block type="text" id="d=8PD,!H^el!GN9oiIr`">
+                        <field name="TEXT">Cadastre-se</field>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="component_set_get" id="`s=8(1UaqnHqO93LXa7B">
+                        <mutation component_type="Button" set_or_get="set" property_name="Text" is_generic="false" instance_name="Botão3"></mutation>
+                        <field name="COMPONENT_SELECTOR">Botão3</field>
+                        <field name="PROP">Text</field>
+                        <value name="VALUE">
+                          <block type="text" id="ZHTGk=Wq4Vn2dDl=6YA@">
+                            <field name="TEXT">Turn to English</field>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="lexical_variable_set" id="U2NH82yEZ_U6}`r@ie6s">
+                            <field name="VAR">global flag</field>
+                            <value name="VALUE">
+                              <block type="math_number" id="On21Kwimd/-}iC?r#U{b">
+                                <field name="NUM">0</field>
+                              </block>
+                            </value>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </statement>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="gWr(pkz*0yl,;anuBhO=" x="284" y="435">
+    <mutation component_type="FirebaseAuth" is_generic="false" instance_name="FirebaseAuth1" event_name="FirebaseAuthError"></mutation>
+    <field name="COMPONENT_SELECTOR">FirebaseAuth1</field>
+    <statement name="DO">
+      <block type="controls_if" id="(]r*~23Uygj]dh#kmR;t">
+        <mutation elseif="1"></mutation>
+        <value name="IF0">
+          <block type="logic_compare" id="?jHl$kCoI!)e#}5=fo{@">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <block type="lexical_variable_get" id="(eaPfPRqp)Y(9pZ^#:YR">
+                <mutation>
+                  <eventparam name="message"></eventparam>
+                </mutation>
+                <field name="VAR">message</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="text" id="$hkv%bKuR#+^8qb[DmqG">
+                <field name="TEXT">INVALID_PASSWORD</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO0">
+          <block type="component_method" id="zVJ@=o3x45-sWkU)Note">
+            <mutation component_type="Notifier" method_name="ShowAlert" is_generic="false" instance_name="Notificador1"></mutation>
+            <field name="COMPONENT_SELECTOR">Notificador1</field>
+            <value name="ARG0">
+              <block type="text" id="yL?=orAK%stoJ=4/OqR5">
+                <field name="TEXT">a senha incorreta</field>
+              </block>
+            </value>
+          </block>
+        </statement>
+        <value name="IF1">
+          <block type="logic_compare" id="At~M5wy)^Y[*3FwhbWZv">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <block type="lexical_variable_get" id="E#AyXCS]Hc~5^x@$+cs-">
+                <mutation>
+                  <eventparam name="message"></eventparam>
+                </mutation>
+                <field name="VAR">message</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="text" id="2@`*SF,S#F=_jaIKyWDv">
+                <field name="TEXT">INVALID_EMAIL</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO1">
+          <block type="component_method" id="C0}7=-NUj]CaOim62Q#}">
+            <mutation component_type="Notifier" method_name="ShowAlert" is_generic="false" instance_name="Notificador1"></mutation>
+            <field name="COMPONENT_SELECTOR">Notificador1</field>
+            <value name="ARG0">
+              <block type="text" id="vLu$D7[%U#c8IpRWHc_4">
+                <field name="TEXT">email inválido</field>
+              </block>
+            </value>
+          </block>
+        </statement>
+      </block>
+    </statement>
+  </block>
+  <yacodeblocks ya-version="186" language-version="27"></yacodeblocks>
+</xml>
